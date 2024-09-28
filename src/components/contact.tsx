@@ -12,10 +12,15 @@ const social_links = [
 export default function Contact() {
   return (
     <section
-      className="flex flex-col items-center gap-8 mt-40 px-12"
+      className="flex flex-col items-center gap-4 mt-40 px-12"
       id="contact-section"
     >
       <h2 className="text-4xl font-bold text-primary">Get in touch</h2>
+      <div className="text-center">
+        <p className="text-base text-muted-foreground">
+          Send a message to <span className="font-semibold">hi@mazecoding.com</span>
+        </p>
+      </div>
       <ContactForm />
       <div className="flex flex-col items-center gap-4">
         <p className="text-lg text-muted-foreground">Or reach out directly:</p>
