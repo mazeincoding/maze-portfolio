@@ -170,8 +170,8 @@ function ServiceCard({ service }: { service: Service }) {
                 className={cn(
                   "px-4",
                   selected_option.type === option.type
-                    ? "bg-primary hover:bg-primary border border-transparent"
-                    : "bg-background border border-primary/25 hover:bg-primary/15"
+                    ? "bg-primary hover:bg-primary border border-transparent shadow-none"
+                    : "bg-background border border-primary/25 hover:bg-primary/15 text-primary shadow-none"
                 )}
                 key={option.type}
                 onClick={() => set_selected_option(option)}
