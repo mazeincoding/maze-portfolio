@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -32,8 +33,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <TooltipProvider>{children}</TooltipProvider>
-          <Toaster />
+          <TooltipProvider>
+            {children}
+            <Analytics />
+            <Toaster />
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
