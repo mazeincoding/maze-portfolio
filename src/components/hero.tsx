@@ -2,11 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import useScrollToSection from "@/hooks/use-scroll-to-section";
 
 export default function Hero() {
   const router = useRouter();
+  const { scrollToSection } = useScrollToSection();
 
   const avatar_content = (
     <Image
@@ -18,19 +19,12 @@ export default function Hero() {
     />
   );
 
-  const scroll_to_contact = () => {
-    const contact_section = document.getElementById("contact-section");
-    if (contact_section) {
-      contact_section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const handle_get_in_touch = () => {
     if (window.location.pathname === "/") {
-      scroll_to_contact();
+      scrollToSection("contact-section");
     } else {
       router.push("/");
-      setTimeout(scroll_to_contact, 100);
+      setTimeout(() => scrollToSection("contact-section"), 100);
     }
   };
 
