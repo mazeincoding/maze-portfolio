@@ -10,13 +10,12 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import useScrollToSection from "@/hooks/use-scroll-to-section";
 
-const skills = ["React", "Next.js", "TypeScript", "Problem Solver"];
+const tags = ["Frontend", "Backend"];
 
 export default function About() {
-  const router = useRouter();
+  const { scrollToSection } = useScrollToSection();
 
   return (
     <section className="flex justify-center bg-background text-foreground w-full max-w-2xl mx-auto px-4 py-16">
@@ -44,16 +43,16 @@ export default function About() {
             calisthenics.
           </p>
           <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <Badge key={skill} variant="outline">
-                {skill}
+            {tags.map((tag) => (
+              <Badge key={tag} variant="outline">
+                {tag}
               </Badge>
             ))}
           </div>
           <Button
             size="sm"
             className="mt-4"
-            onClick={() => router.push("#contact-section")}
+            onClick={() => scrollToSection("contact-section")}
           >
             Connect with me
           </Button>
