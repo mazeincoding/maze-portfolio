@@ -102,7 +102,7 @@ export default function Hire() {
     },
   ];
 
-  const initial_services_count = 4;
+  const initial_services_count = 3;
   const displayed_services = show_all
     ? services
     : services.slice(0, initial_services_count);
