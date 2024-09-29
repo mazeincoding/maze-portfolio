@@ -180,8 +180,6 @@ export function TechCirclesSm() {
       <div className="inline-flex flex-nowrap animate-infinite-scroll">
         {tech_circle_list}
         {React.cloneElement(tech_circle_list, { "aria-hidden": "true" })}
-        {React.cloneElement(tech_circle_list, { "aria-hidden": "true" })}
-        {React.cloneElement(tech_circle_list, { "aria-hidden": "true" })}
       </div>
       <div className="absolute top-0 left-0 bg-gradient-to-r from-background/75 to-transparent h-full w-32 z-10 pointer-events-none"></div>
       <div className="absolute top-0 right-0 bg-gradient-to-l from-background/75 to-transparent h-full w-32 z-10 pointer-events-none"></div>
