@@ -62,7 +62,6 @@ export function TechCirclesLg() {
                       ? "invert dark:invert-0"
                       : ""
                   }`}
-                  priority={true}
                 />
               </motion.div>
             </Link>
@@ -75,7 +74,6 @@ export function TechCirclesLg() {
             width={35}
             height={35}
             className="rounded-full h-fit"
-            priority={true}
           />
           <div className="flex flex-col">
             <h3 className="font-semibold">{inner_circle?.display_name}</h3>
@@ -118,7 +116,6 @@ export function TechCirclesLg() {
                             ? "invert dark:invert-0"
                             : ""
                         }`}
-                        priority={true}
                       />
                     )}
                   </motion.div>
@@ -132,7 +129,6 @@ export function TechCirclesLg() {
                 width={35}
                 height={35}
                 className="rounded-full h-fit"
-                priority={true}
               />
               <div className="flex flex-col">
                 <h3 className="font-semibold">{circle.display_name}</h3>
