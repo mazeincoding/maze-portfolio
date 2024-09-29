@@ -1,3 +1,5 @@
+// This component is from Eldora UI (https://eldoraui.site/components/sections/companies) and tweaked slightly.
+
 "use client";
 
 import Image from "next/image";
