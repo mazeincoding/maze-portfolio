@@ -16,6 +16,7 @@ export default function Hero() {
       width={256}
       height={256}
       className="w-48 h-48 lg:w-64 lg:h-64 rounded-full object-cover"
+      priority={true}
     />
   );
 
