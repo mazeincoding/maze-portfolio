@@ -27,6 +27,7 @@ export default function About() {
             width={60}
             height={60}
             className="rounded-full object-cover"
+            priority={true}
           />
           <div className="text-left">
             <CardTitle className="text-2xl font-bold text-primary">
