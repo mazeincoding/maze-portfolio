@@ -61,8 +61,8 @@ export default function Projects() {
       {projects.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}
-      <p className="text-left w-full max-w-2xl text-muted-foreground flex items-center">
-        <InfoIcon className="w-4 h-4 mr-2" />
+      <p className="text-left w-full max-w-2xl text-muted-foreground flex items-center space-x-2">
+        <InfoIcon className="w-4 h-4" />
         <span>
           Currently lead dev on a large-scale web-based sports game (details
           under NDA)
