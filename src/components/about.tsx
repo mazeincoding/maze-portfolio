@@ -24,8 +24,8 @@ export default function About() {
           <Image
             src="/images/me-working.jpg"
             alt="Maze coding"
-            width={60}
-            height={60}
+            width={80}
+            height={80}
             className="rounded-full object-cover"
             priority={true}
           />
