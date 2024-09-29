@@ -155,34 +155,36 @@ export function TechCirclesLg() {
   );
 }
 
-export function TechCirclesSm() {
-  const tech_circle_list = (
-    <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 [&_img]:max-w-none">
-      {tech_circles.map((circle, index) => (
-        <li key={index}>
-          <Image
-            src={`/images/${circle.logo}`}
-            alt={circle.display_name}
-            width={60}
-            height={60}
-            priority={true}
-            className={`object-cover ${
-              circle.display_name === "Next.js" ? "invert dark:invert-0" : ""
-            }`}
-          />
-        </li>
-      ))}
-    </ul>
-  );
+// Moved to new file: logo-carousel.tsx
+// export function TechCirclesSm() {
+//   const tech_circle_list = (
+//     <ul className="flex items-center justify-center md:justify-start [&_li]:mx-4 [&_img]:max-w-none">
+//       {tech_circles.map((circle, index) => (
+//         <li key={index}>
+//           <Image
+//             src={`/images/${circle.logo}`}
+//             alt={circle.display_name}
+//             width={60}
+//             height={60}
+//             priority={true}
+//             className={`object-cover ${
+//               circle.display_name === "Next.js" ? "invert dark:invert-0" : ""
+//             }`}
+//           />
+//         </li>
+//       ))}
+//     </ul>
+//   );
 
-  return (
-    <div className="w-full mt-8 relative overflow-x-hidden">
-      <div className="inline-flex flex-nowrap animate-infinite-scroll">
-        {tech_circle_list}
-        {React.cloneElement(tech_circle_list, { "aria-hidden": "true" })}
-      </div>
-      <div className="absolute top-0 left-0 bg-gradient-to-r from-background/75 to-transparent h-full w-32 z-10 pointer-events-none"></div>
-      <div className="absolute top-0 right-0 bg-gradient-to-l from-background/75 to-transparent h-full w-32 z-10 pointer-events-none"></div>
-    </div>
-  );
-}
+//   return (
+//     <div className="w-full mt-8 relative overflow-hidden">
+//       <div className="flex animate-infinite-scroll">
+//         {tech_circle_list}
+//         {React.cloneElement(tech_circle_list, { "aria-hidden": "true" })}
+//         {React.cloneElement(tech_circle_list, { "aria-hidden": "true" })}
+//       </div>
+//       <div className="absolute top-0 left-0 bg-gradient-to-r from-background/75 to-transparent h-full w-32 z-10 pointer-events-none"></div>
+//       <div className="absolute top-0 right-0 bg-gradient-to-l from-background/75 to-transparent h-full w-32 z-10 pointer-events-none"></div>
+//     </div>
+//   );
+// }
