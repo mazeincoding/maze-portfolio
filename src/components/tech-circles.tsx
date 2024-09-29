@@ -10,6 +10,15 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  other: {
+    "next-preload": tech_circles
+      .map((circle) => `/images/${circle.logo}`)
+      .join(","),
+  },
+};
 
 export function TechCirclesLg() {
   const outer_circle_radius = 240;
