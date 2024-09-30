@@ -70,7 +70,7 @@ export default function Projects() {
         <ProjectCard key={project.title} project={project} />
       ))}
       <p className="text-left w-full max-w-2xl text-muted-foreground flex space-x-2">
-        <InfoIcon className="w-4 h-4 flex-shrink-0" />
+        <InfoIcon className="w-4 h-4 flex-shrink-0 mt-1" />
         <span>
           Currently lead dev on a large-scale web-based sports game (details
           under NDA)
