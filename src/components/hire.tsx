@@ -116,7 +116,7 @@ export default function Hire() {
         ))}
         {show_all && (
           <>
-            <div className="flex justify-center sticky bottom-4 mt-4 z-50">
+            <div className="flex justify-center sticky bottom-6 mt-6 z-50">
               <Button onClick={() => set_show_all(false)}>
                 I've seen enough
               </Button>
