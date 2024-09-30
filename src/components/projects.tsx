@@ -54,6 +54,14 @@ export default function Projects() {
       link: "https://voxscribe-ai.vercel.app",
       tags: ["Frontend", "Backend", "Authentication", "Database"],
     },
+    {
+      title: "I have a domain problem",
+      description:
+        "Confess your domain buying addiction and join others in acknowledging the problem.",
+      logo: "/images/ihaveadomainproblem-logo.png",
+      link: "https://ihaveadomainproblem.com",
+      tags: ["Real-time", "Frontend", "Database"],
+    },
   ];
   return (
     <section className="flex flex-col gap-8 items-center mt-40 px-12">
