@@ -1,4 +1,4 @@
-import { TechCirclesLg } from "./tech-circles";
+import { TechCircles } from "./tech-circles";
 import LogoCarousel from "./logo-carousel";
 
 export default function Skills() {
@@ -9,7 +9,7 @@ export default function Skills() {
           Skills
         </h2>
         <div className="hidden md:block">
-          <TechCirclesLg />
+          <TechCircles />
         </div>
         <div className="block md:hidden w-full mt-10">
           <LogoCarousel />

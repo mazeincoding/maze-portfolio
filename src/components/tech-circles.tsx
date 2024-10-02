@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-export function TechCirclesLg() {
+export function TechCircles() {
   const outer_circle_radius = 240;
   const circle_size = 100;
 
