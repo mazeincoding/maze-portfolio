@@ -57,7 +57,7 @@ export default function Projects() {
     {
       title: "I have a domain problem",
       description:
-        "Confess your domain buying addiction and join others in acknowledging the problem.",
+        "Confess your domain buying addiction and join others in acknowledging the problem. Add your listings to the site and explain domain names.",
       logo: "/images/ihaveadomainproblem-logo.png",
       link: "https://ihaveadomainproblem.com",
       tags: ["Real-time", "Frontend", "Database"],
