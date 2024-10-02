@@ -2,21 +2,26 @@ import Hero from "@/components/hero";
 import { Header } from "@/components/header";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
-import Hire from "@/components/hire";
 import Footer from "@/components/footer";
 import Contact from "@/components/contact";
 import About from "@/components/about";
+import Sidebar from "@/components/sidebar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col relative ">
+    <div className="flex flex-col relative">
       <Header />
-      <Hero />
-      <Projects />
-      <Skills />
-      <About />
-      <Contact />
-      <Footer />
+      <div className="flex-1 flex">
+        <Sidebar />
+        <div className="flex-grow">
+          <Hero />
+          <Projects />
+          <Skills />
+          <About />
+          <Contact />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
