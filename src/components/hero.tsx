@@ -30,7 +30,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center bg-background text-foreground w-full max-w-5xl mx-auto gap-16 px-12 pt-16 lg:pt-24">
+    <section className="flex flex-col lg:flex-row items-center justify-center bg-background text-foreground w-full max-w-5xl mx-auto gap-16 px-12 py-16">
       <div className="flex flex-col gap-6 lg:w-1/2 lg:order-1">
         <div className="flex justify-center lg:hidden">{avatar_content}</div>
         <div className="flex flex-col gap-4 lg:gap-4">
