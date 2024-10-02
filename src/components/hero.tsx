@@ -30,12 +30,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center bg-background text-foreground w-full max-w-5xl mx-auto gap-16 px-12 py-16 lg:mt-8" id="hero-section">
+    <section
+      className="flex flex-col lg:flex-row items-center justify-center bg-background text-foreground w-full max-w-5xl mx-auto gap-16 px-12 py-16 lg:mt-8"
+      id="hero-section"
+    >
       <div className="flex flex-col gap-6 lg:w-1/2 lg:order-1">
         <div className="flex justify-center lg:hidden">{avatar_content}</div>
         <div className="flex flex-col gap-4 lg:gap-4">
           {/* For large screens */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal flex-col gap-2 text-center lg:text-left hidden sm:flex">
+          <h1 className="text-3xl sm:text-4xl xl:text-5xl lg:text-[2.4rem] font-normal flex-col gap-2 text-center lg:text-left hidden sm:flex">
             <span>Hello! I'm Maze 👋</span>
             <span className="font-semibold bg-gradient-to-r from-teal-400 to-primary bg-clip-text text-transparent">
               A full-stack web dev
