@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <div className="flex-1 flex">
         <Sidebar />
-        <div className="flex-grow">
+        <div className="flex-grow relative w-full">
           <Hero />
           <Projects />
           <Skills />
