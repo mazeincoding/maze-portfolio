@@ -18,7 +18,7 @@ export default function About() {
   const { scrollToSection } = useScrollToSection();
 
   return (
-    <section className="flex justify-center bg-background text-foreground w-full max-w-2xl mx-auto px-4 py-16">
+    <section className="flex justify-center bg-background text-foreground w-full max-w-2xl mx-auto px-4 py-16" id="about-section">
       <Card className="w-full max-w-3xl">
         <CardHeader className="flex flex-row items-center gap-6">
           <Image
