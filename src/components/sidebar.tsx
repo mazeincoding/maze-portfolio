@@ -25,7 +25,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 h-[calc(100vh-64px)] bg-background border-r border-border sticky top-16 hidden flex-shrink-0 lg:block">
+    <aside className="w-64 h-[calc(100vh-64px)] bg-background border-r border-border sticky top-16">
       <nav className="p-4">
         <ul className="space-y-2">
           {links.map((link) => (
