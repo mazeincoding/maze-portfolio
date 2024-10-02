@@ -64,7 +64,7 @@ export default function Projects() {
     },
   ];
   return (
-    <section className="flex flex-col gap-8 items-center mt-40 px-12">
+    <section className="flex flex-col gap-8 items-center py-16 px-12">
       <h2 className="text-4xl font-bold text-primary space-y-4">Projects</h2>
       {projects.map((project) => (
         <ProjectCard key={project.title} project={project} />
