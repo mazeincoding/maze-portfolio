@@ -29,7 +29,7 @@ export default function AboutPage() {
   const { scrollToSection } = useScrollToSection();
 
   return (
-    <div className="container mx-auto px-12 py-8 sm:py-16 max-w-3xl space-y-12 sm:space-y-16">
+    <div className="container mx-auto px-12 py-8 sm:py-16 max-w-3xl space-y-16">
       <ProfileSection scrollToSection={scrollToSection} />
       <Section title="My Journey">
         <Paragraph>
@@ -49,7 +49,9 @@ export default function AboutPage() {
         </Paragraph>
         <ul className="list-disc list-inside text-base text-muted-foreground space-y-1">
           {approach_steps.map((step) => (
-            <li key={step} className="text-lg">{step}</li>
+            <li key={step} className="text-lg">
+              {step}
+            </li>
           ))}
         </ul>
         <Paragraph>
@@ -73,7 +75,11 @@ export default function AboutPage() {
   );
 }
 
-function ProfileSection({ scrollToSection }: { scrollToSection: (section: string) => void }) {
+function ProfileSection({
+  scrollToSection,
+}: {
+  scrollToSection: (section: string) => void;
+}) {
   return (
     <section className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
       <Image
