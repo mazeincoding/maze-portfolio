@@ -1,7 +1,5 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
 import useScrollToSection from "@/hooks/use-scroll-to-section";
 import { use_sidebar_store } from "@/store/sidebar";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
@@ -15,7 +13,6 @@ interface Link {
 }
 
 export default function Sidebar() {
-  const pathname = usePathname();
   const { scrollToSection } = useScrollToSection();
   const { is_open, close } = use_sidebar_store();
 
