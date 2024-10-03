@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export function TechCircles() {
   const outer_circle_radius = 240;
-  const circle_size = 100;
+  const circle_size = 80; // Reduced from 100 to 80
 
   const calculate_position = (index: number) => {
     const angle = (index / (tech_circles.length - 1)) * 2 * Math.PI;
@@ -66,8 +66,10 @@ export function TechCircles() {
                   alt={inner_circle?.display_name || ""}
                   width={224}
                   height={224}
-                  className={`rounded-full cursor-pointer ${
-                    inner_circle?.display_name === "Next.js"
+                  className={`cursor-pointer ${
+                    inner_circle?.display_name === "Next.js" ||
+                    inner_circle?.display_name === "Express" ||
+                    inner_circle?.display_name === "GitHub"
                       ? "invert dark:invert-0"
                       : ""
                   }`}
@@ -83,8 +85,14 @@ export function TechCircles() {
             alt={inner_circle?.display_name || ""}
             width={35}
             height={35}
-            className="rounded-full h-fit"
             priority={true}
+            className={`h-fit ${
+              inner_circle?.display_name === "Next.js" ||
+              inner_circle?.display_name === "Express" ||
+              inner_circle?.display_name === "GitHub"
+                ? "invert dark:invert-0"
+                : ""
+            }`}
           />
           <div className="flex flex-col">
             <h3 className="font-semibold">{inner_circle?.display_name}</h3>
@@ -110,8 +118,8 @@ export function TechCircles() {
               >
                 <Link href={circle.url} target="_blank">
                   <motion.div
-                    className={`w-[100px] h-[100px] cursor-pointer ${
-                      !circle.logo ? "bg-secondary rounded-full" : ""
+                    className={`w-[80px] h-[80px] cursor-pointer ${
+                      !circle.logo ? "bg-secondary" : ""
                     }`}
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
@@ -120,10 +128,12 @@ export function TechCircles() {
                       <Image
                         src={`/images/${circle.logo}`}
                         alt={circle.display_name}
-                        width={100}
-                        height={100}
+                        width={80}
+                        height={80}
                         className={`object-cover ${
-                          circle.display_name === "Next.js"
+                          circle.display_name === "Next.js" ||
+                          circle.display_name === "Express" ||
+                          circle.display_name === "GitHub"
                             ? "invert dark:invert-0"
                             : ""
                         }`}
@@ -140,8 +150,14 @@ export function TechCircles() {
                 alt={circle.display_name || ""}
                 width={35}
                 height={35}
-                className="rounded-full h-fit"
                 priority={true}
+                className={`h-fit ${
+                  circle.display_name === "Next.js" ||
+                  circle.display_name === "Express" ||
+                  circle.display_name === "GitHub"
+                    ? "invert dark:invert-0"
+                    : ""
+                }`}
               />
               <div className="flex flex-col">
                 <h3 className="font-semibold">{circle.display_name}</h3>
