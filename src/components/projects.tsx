@@ -93,11 +93,13 @@ export default function Projects() {
       id="projects-section"
     >
       <h2 className="text-4xl font-bold text-primary space-y-4">Projects</h2>
-      {projects.map((project) => (
-        <ProjectCard key={project.title} project={project} />
-      ))}
+      <div className="flex flex-col gap-20">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </div>
       <p className="text-left w-full max-w-2xl text-muted-foreground flex space-x-2">
-        <InfoIcon className="w-4 h-4 flex-shrink-0 mt-1" />
+        <InfoIcon className="w-4 h-4 flex-shrink-0" />
         <span>
           Currently lead dev on a large-scale web-based sports game (details
           under NDA)
@@ -115,8 +117,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const router = useRouter();
 
   return (
-    <Card className="border border-primary/15 w-full max-w-2xl">
-      <CardHeader className="gap-2">
+    <div className="w-full max-w-2xl space-y-6">
+      <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
           <Image
             className="rounded-full"
@@ -126,39 +128,37 @@ export function ProjectCard({ project }: ProjectCardProps) {
             height={48}
           />
           <Link href={project.link} className="hover:underline">
-            <CardTitle className="text-2xl">{project.title}</CardTitle>
+            <h2 className="text-2xl font-bold">{project.title}</h2>
           </Link>
         </div>
-        <CardDescription className="text-lg">
-          {project.description}
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
+        <p className="text-lg text-muted-foreground">{project.description}</p>
+      </div>
+      <div className="space-y-4">
         <div className="flex items-start gap-2">
-          <AlertCircle className="w-5 h-5 text-destructive mt-1 flex-shrink-0" />
+          <AlertCircle className="w-5 h-5 text-destructive flex-shrink-0" />
           <div>
             <h3 className="font-semibold text-lg">Problem:</h3>
             <p>{project.problem}</p>
           </div>
         </div>
         <div className="flex items-start gap-2">
-          <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
           <div>
             <h3 className="font-semibold text-lg">Solution:</h3>
             <p>{project.solution}</p>
           </div>
         </div>
         <div className="flex items-start gap-2">
-          <InfoIcon className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+          <InfoIcon className="w-5 h-5 text-blue-500 flex-shrink-0" />
           <div>
             <h3 className="font-semibold text-lg">Challenge:</h3>
             <p>{project.challenge}</p>
           </div>
         </div>
         <div className="flex items-start gap-2">
-          <Code2Icon className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-          <div className="w-full">
-            <h3 className="font-semibold text-lg mb-2">Tech Stack:</h3>
+          <Code2Icon className="w-5 h-5 text-green-500 flex-shrink-0" />
+          <div className="w-full space-y-2">
+            <h3 className="font-semibold text-lg">Tech Stack:</h3>
             <div className="flex flex-wrap gap-2">
               {project.tech_stack.split(", ").map((tech) => (
                 <Badge key={tech} variant="outline" className="text-xs py-0.5">
@@ -168,12 +168,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </div>
           </div>
         </div>
-      </CardContent>
-      <CardFooter className="flex-col items-start gap-6">
-        <Button className="px-8" onClick={() => router.push(project.link)}>
-          Visit
-        </Button>
-      </CardFooter>
-    </Card>
+      </div>
+      <Button className="px-8" onClick={() => router.push(project.link)}>
+        Visit
+      </Button>
+    </div>
   );
 }
