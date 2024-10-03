@@ -125,11 +125,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form
-      onSubmit={handle_submit}
-      className="w-full max-w-md space-y-4"
-      noValidate
-    >
+    <form onSubmit={handle_submit} className="w-full space-y-4" noValidate>
       {render_input("name", "text", "Your Name")}
       {render_input("email", "email", "Your Email")}
       <div>

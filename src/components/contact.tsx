@@ -12,7 +12,7 @@ const social_links = [
 export default function Contact() {
   return (
     <section
-      className="flex flex-col items-center gap-4 py-16 px-12"
+      className="flex flex-col items-center gap-4 py-16 px-12 max-w-3xl w-full mx-auto"
       id="contact-section"
     >
       <h2 className="text-4xl font-bold text-primary">Get in touch</h2>
