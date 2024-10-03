@@ -16,7 +16,6 @@ export default function LogoCarousel() {
               alt={circle.display_name}
               width={60}
               height={60}
-              priority={true}
               className={`object-cover ${
                 circle.display_name === "Next.js" ? "invert dark:invert-0" : ""
               }`}

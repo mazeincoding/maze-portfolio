@@ -75,7 +75,6 @@ export function TechCircles() {
                       ? "invert dark:invert-0"
                       : ""
                   }`}
-                  priority={true}
                 />
               </motion.div>
             </Link>
@@ -87,7 +86,6 @@ export function TechCircles() {
             alt={inner_circle?.display_name || ""}
             width={35}
             height={35}
-            priority={true}
             className={`h-fit ${
               inner_circle?.display_name === "Next.js" ||
               inner_circle?.display_name === "Express" ||
@@ -140,7 +138,6 @@ export function TechCircles() {
                             ? "invert dark:invert-0"
                             : ""
                         }`}
-                        priority={true}
                       />
                     )}
                   </motion.div>
@@ -153,7 +150,6 @@ export function TechCircles() {
                 alt={circle.display_name || ""}
                 width={35}
                 height={35}
-                priority={true}
                 className={`h-fit ${
                   circle.display_name === "Next.js" ||
                   circle.display_name === "Express" ||
