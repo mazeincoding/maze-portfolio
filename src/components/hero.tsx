@@ -52,9 +52,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-base text-muted-foreground max-w-lg text-center lg:text-left">
-            I'm 15 years old and I've been coding for 3 years. I'm a full-stack
-            web developer who loves to solve problems and turn ideas into
-            reality.
+            15 year old full-stack web developer. Producing quality work at
+            lightning speed using AI{" "}
+            <span className="font-semibold text-primary">as a utility</span>.
           </p>
           <div className="w-full flex justify-center lg:justify-start">
             <Button
