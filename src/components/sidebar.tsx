@@ -18,14 +18,14 @@ export default function Sidebar() {
 
   const links: Link[] = [
     { href: "hero-section", label: "Home", icon: <Home size={18} /> },
-    { href: "skills-section", label: "Skills", icon: <Code size={18} /> },
     {
       href: "projects-section",
       label: "Projects",
       icon: <Briefcase size={18} />,
     },
-    { href: "contact-section", label: "Contact", icon: <Mail size={18} /> },
+    { href: "skills-section", label: "Skills", icon: <Code size={18} /> },
     { href: "about-section", label: "About", icon: <User size={18} /> },
+    { href: "contact-section", label: "Contact", icon: <Mail size={18} /> },
   ];
 
   const handle_click = (href: string) => {
