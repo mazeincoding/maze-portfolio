@@ -29,7 +29,7 @@ export default function AboutPage() {
   const { scrollToSection } = useScrollToSection();
 
   return (
-    <div className="container mx-auto px-12 py-8 sm:py-16 max-w-3xl space-y-16" id="about-section">
+    <div className="container mx-auto px-12 py-8 sm:py-16 max-w-3xl space-y-24" id="about-section">
       <ProfileSection scrollToSection={scrollToSection} />
       <Section title="My Journey">
         <Paragraph>

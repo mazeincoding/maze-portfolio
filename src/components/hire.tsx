@@ -108,7 +108,10 @@ export default function Hire() {
     : services.slice(0, initial_services_count);
 
   return (
-    <section className="flex flex-col items-center gap-8 mt-32 relative px-12" id="hire-section">
+    <section
+      className="flex flex-col items-center gap-8 py-24 relative px-12"
+      id="hire-section"
+    >
       <h2 className="text-4xl font-bold text-primary space-y-4">Hire me</h2>
       <div className="flex flex-col gap-6 w-full items-center">
         {displayed_services.map((service) => (

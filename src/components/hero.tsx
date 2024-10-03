@@ -42,7 +42,7 @@ export default function Hero() {
 
   return (
     <section
-      className="flex flex-col lg:flex-row items-center justify-center bg-background text-foreground w-full max-w-5xl mx-auto gap-16 px-12 py-16 lg:mt-8"
+      className="flex flex-col lg:flex-row items-center justify-center bg-background text-foreground w-full max-w-5xl mx-auto gap-16 px-12 py-24 lg:mt-8"
       id="hero-section"
     >
       <div className="flex flex-col gap-6 lg:w-1/2 lg:order-1">
