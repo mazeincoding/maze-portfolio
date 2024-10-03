@@ -15,12 +15,12 @@ export function Header() {
   return (
     <header className="w-full h-16 border-b flex justify-between items-center p-4 sticky top-0 z-50 backdrop-blur">
       <div className="flex items-center justify-between w-full">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 lg:hidden">
           <Button variant="ghost" size="icon" onClick={toggle_sidebar}>
             <Menu className="h-5 w-5" />
           </Button>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 lg:ml-auto">
           <div>
             <Link
               href="https://github.com/mazeincoding"
