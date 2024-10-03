@@ -79,8 +79,7 @@ export default function Hero() {
           </div>
           <div className="w-full flex justify-center lg:justify-start">
             <Button
-              size="lg"
-              className="rounded-2xl space-x-2 flex"
+              className="rounded-2xl space-x-2 flex px-5"
               onClick={handle_get_in_touch}
             >
               <span>Get in touch</span>
