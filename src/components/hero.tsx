@@ -68,7 +68,11 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap justify-center lg:justify-start gap-2">
             {unique_traits.map((trait) => (
-              <Badge key={trait} variant="outline" className="border-primary/25 text-primary">
+              <Badge
+                key={trait}
+                variant="outline"
+                className="border-primary/25 text-primary"
+              >
                 {trait}
               </Badge>
             ))}
