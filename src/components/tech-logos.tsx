@@ -94,4 +94,51 @@ export const tech_circles: TTechCircle[] = [
     description:
       "A programming language used to create interactive effects within web browsers.",
   },
+  {
+    logo: "ejs.png",
+    url: "https://ejs.co/",
+    display_name: "EJS",
+    is_inner: false,
+    description: "A simple templating language for generating HTML output.",
+  },
+  {
+    logo: "express.png",
+    url: "https://expressjs.com/",
+    display_name: "Express",
+    is_inner: false,
+    description:
+      "A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+  },
+  {
+    logo: "aws.png",
+    url: "https://aws.amazon.com/",
+    display_name: "AWS",
+    is_inner: false,
+    description:
+      "A comprehensive cloud computing platform that provides a range of services for building, deploying, and scaling web applications.",
+  },
+  {
+    logo: "python.png",
+    url: "https://www.python.org/",
+    display_name: "Python",
+    is_inner: false,
+    description:
+      "A high-level, interpreted programming language known for its clear syntax and readability.",
+  },
+  {
+    logo: "postgres.png",
+    url: "https://www.postgresql.org/",
+    display_name: "PostgreSQL",
+    is_inner: false,
+    description:
+      "An open-source relational database management system known for its reliability and performance.",
+  },
+  {
+    logo: "zustand.png",
+    url: "https://zustand-demo.vercel.app/",
+    display_name: "Zustand",
+    is_inner: false,
+    description:
+      "A state management library for React that provides a simple and efficient way to manage state.",
+  },
 ];
