@@ -4,10 +4,21 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import useScrollToSection from "@/hooks/use-scroll-to-section";
+import { Badge } from "./ui/badge";
 
 export default function Hero() {
   const router = useRouter();
   const { scrollToSection } = useScrollToSection();
+
+  const unique_traits = [
+    "Unschooled",
+    "Self-taught",
+    "24/7 Coder",
+    "AI-Augmented",
+    "Tech Explorer",
+    "Root-Cause Solver",
+    "Continuous Learner",
+  ];
 
   const avatar_content = (
     <Image
@@ -52,10 +63,16 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-base text-muted-foreground max-w-lg text-center lg:text-left">
-            15 year old full-stack web developer. Producing quality work at
-            lightning speed using AI{" "}
-            <span className="font-semibold text-primary">as a utility</span>.
+            Self-taught full-stack web developer. I code 24/7, master new tech
+            daily, and solve problems using root-cause analysis.
           </p>
+          <div className="flex flex-wrap gap-2">
+            {unique_traits.map((trait) => (
+              <Badge key={trait} variant="outline" className="border-primary/25 text-primary">
+                {trait}
+              </Badge>
+            ))}
+          </div>
           <div className="w-full flex justify-center lg:justify-start">
             <Button
               size="lg"
