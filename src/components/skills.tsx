@@ -1,7 +1,13 @@
+"use client";
+
 import { TechCircles } from "./tech-circles";
 import LogoCarousel from "./logo-carousel";
+import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Skills() {
+  const router = useRouter();
+
   return (
     <section
       className="flex flex-col gap-8 items-center py-24 w-full"
@@ -17,9 +23,7 @@ export default function Skills() {
         <div className="block md:hidden w-full mt-10">
           <LogoCarousel />
         </div>
-        {/* <Button className="mt-2" onClick={() => router.push("/skills")}>
-          View all skills
-        </Button> */}
+        <Button onClick={() => router.push("/skills")}>View all skills</Button>
       </div>
     </section>
   );

@@ -49,7 +49,7 @@ export function TechCircles() {
   const hover_card_close_delay = 0;
 
   return (
-    <div className="relative w-[400px] h-[400px] mb-20">
+    <div className="relative w-[400px] h-[400px] mb-6">
       <HoverCard
         openDelay={hover_card_open_delay}
         closeDelay={hover_card_close_delay}
