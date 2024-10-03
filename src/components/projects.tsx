@@ -9,10 +9,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+  CardContent,
 } from "./ui/card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { InfoIcon } from "lucide-react";
+import { InfoIcon, AlertCircle, CheckCircle2 } from "lucide-react";
 
 interface Project {
   title: string;
@@ -20,6 +21,8 @@ interface Project {
   logo: string;
   link: string;
   tags: string[];
+  problem: string;
+  solution: string;
 }
 
 export default function Projects() {
@@ -37,6 +40,10 @@ export default function Projects() {
         "Authentication",
         "Database",
       ],
+      problem:
+        "Starting a timer as you do a handstand is hard. Stopping the timer is even harder.",
+      solution:
+        "The app uses your phone's camera with AI to detect when you're in a handstand and automatically start and stop the timer.",
     },
     {
       title: "PromptsLabs",
@@ -45,6 +52,10 @@ export default function Projects() {
       logo: "/images/prompts-labs-logo.png",
       link: "https://promptslabs.com",
       tags: ["Frontend", "Backend", "Database"],
+      problem:
+        "When a new LLM comes out, finding the right prompts to test it on is time-consuming.",
+      solution:
+        "I built a library of prompts to test LLMs on their reasoning. Find a prompt, copy it and paste it into the LLM.",
     },
     {
       title: "VoxScribe AI",
@@ -53,6 +64,10 @@ export default function Projects() {
       logo: "/images/voxscribe-logo.png",
       link: "https://voxscribe-ai.vercel.app",
       tags: ["Frontend", "Backend", "Authentication", "Database"],
+      problem:
+        "Transcribing audio often comes out as garbage when it comes to readability. It's just a bunch of words.",
+      solution:
+        "This app will transcribe your audio and use AI to format it into readable text.",
     },
     {
       title: "I have a domain problem",
@@ -61,6 +76,9 @@ export default function Projects() {
       logo: "/images/ihaveadomainproblem-logo.png",
       link: "https://ihaveadomainproblem.com",
       tags: ["Real-time", "Frontend", "Database"],
+      problem: "Buying too many domain names. It's a real problem.",
+      solution:
+        "This app doesn't magically solve your domain buying addiction, but it does allow you to list your unused domain names and maybe... someone with a domain problem will buy them.",
     },
   ];
   return (
@@ -109,6 +127,22 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.description}
         </CardDescription>
       </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="flex items-start gap-2">
+          <AlertCircle className="w-5 h-5 text-destructive mt-1 flex-shrink-0" />
+          <div>
+            <h3 className="font-semibold text-lg">Problem:</h3>
+            <p>{project.problem}</p>
+          </div>
+        </div>
+        <div className="flex items-start gap-2">
+          <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+          <div>
+            <h3 className="font-semibold text-lg">Solution:</h3>
+            <p>{project.solution}</p>
+          </div>
+        </div>
+      </CardContent>
       <CardFooter className="flex-col items-start gap-6">
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
