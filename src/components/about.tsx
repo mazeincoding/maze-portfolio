@@ -29,7 +29,10 @@ export default function AboutPage() {
   const { scrollToSection } = useScrollToSection();
 
   return (
-    <div className="container mx-auto px-12 py-8 sm:py-16 max-w-3xl space-y-24" id="about-section">
+    <div
+      className="container mx-auto px-12 py-8 sm:py-16 max-w-3xl space-y-24"
+      id="about-section"
+    >
       <ProfileSection scrollToSection={scrollToSection} />
       <Section title="My Journey">
         <Paragraph>
@@ -81,7 +84,7 @@ function ProfileSection({
   scrollToSection: (section: string) => void;
 }) {
   return (
-    <section className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+    <section className="flex flex-col sm:flex-row sm:items-center items-center gap-8">
       <Image
         src="/images/me-working.jpg"
         alt="Maze coding"
@@ -104,9 +107,6 @@ function ProfileSection({
             </Badge>
           ))}
         </div>
-        <Button onClick={() => scrollToSection("contact-section")}>
-          Connect with me
-        </Button>
       </div>
     </section>
   );
