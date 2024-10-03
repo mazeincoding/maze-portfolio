@@ -3,14 +3,6 @@
 import Link from "next/link";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from "./ui/card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { InfoIcon, AlertCircle, CheckCircle2, Code2Icon } from "lucide-react";
