@@ -139,7 +139,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="space-y-4">
         {renderProjectInfo(<AlertCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />, "Problem", project.problem)}
         {renderProjectInfo(<CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />, "Solution", project.solution)}
-        {renderProjectInfo(<InfoIcon className="w-5 h-5 text-blue-500 flex-shrink-0 mt-1" />, "Challenge", project.challenge)}
+        {/* {renderProjectInfo(<InfoIcon className="w-5 h-5 text-blue-500 flex-shrink-0 mt-1" />, "Challenge", project.challenge)} */}
         <div className="flex items-start gap-2">
           <Code2Icon className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
           <div className="w-full space-y-2">
